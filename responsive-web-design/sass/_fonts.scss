@@ -1,0 +1,51 @@
+// Single quotation mark is not used for font info other than font-family.
+
+// font information for header (desktop)
+$logo_font-family: 'Aldrich', sans-serif;
+$logo_font-weight: 400;  
+$logo_font-size: 24px;  
+$logo_line-height: 36px;
+$logo_colors: #242634; 
+
+// font information for header (mobile)
+$logo-small_font-family: 'Baloo 2', sans-serif;
+$logo-small_font-weight: 800;  
+$logo_font-size: 24px;  
+$logo_line-height: 36px;
+$logo_colors: #242634;
+
+
+// font information for header links (desktop)
+$link_font-family: 'Source Sans 3', sans-serif; 
+$link_font-size: 16px;  
+$link_line-height: 22.4px;
+$link_font-style: normal;
+
+
+
+// font information for p in the main content (desktop)
+$para_font-size: 22px;  
+$para_line-height: 33px;
+$para_font-optical-sizing: auto;
+
+// p (mobile)
+$para_mobile_font-size: 12px;
+$para_mobile_line-height: 18px;
+
+
+// font information for h1 in the main content (desktop)
+$head_font-family: 'Poppins', sans-serif;
+$head_font-weight: 500;  
+$head_font-size: 90px;  
+$head_line-height: 102px;
+
+// h1 (mobile)
+$head_mobile_font-size: 36px;
+$head_mobile_line-height: 39.6px;
+
+// p (tablet)
+$head_tablet_font-size: 72px;
+
+
+
+// font information for header ()

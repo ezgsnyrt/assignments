@@ -1,0 +1,131 @@
+.table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.table-up, .table-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1% 0 1% 0;
+    border-bottom-style: solid;
+    border-color: #D8D8D8;
+    border-width: 1px;
+}
+
+.table-left {
+    width: 50%;
+}
+
+.table-right {
+    width: 50%;
+}
+
+.table__content-above, .table__content-below {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-subtitle {
+    font-size: 18px;
+}
+
+.content__detail {
+    width: 20%;
+    line-height: 2rem;
+}
+
+.content__name {
+    width: 15%;
+}
+
+.content__date {
+    width: 10%;
+}
+
+
+
+
+/* Responsive Design for Table*/
+@media only screen and (min-width:1440px) and (max-width:1800px) {
+    .table-subtitle {
+        font-size: 20px;
+    }
+
+    .content__name,
+    .content__detail,
+    .content__date {
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (min-width:768px) and (max-width:1439px) {
+    .table {
+        .table-left {
+            width: 40%;
+        }
+
+        .table-right {
+            width: 55%;
+        }
+
+        .content__name,
+        .content__detail,
+        .content__date {
+            font-size: 16px;
+        }
+
+        .content__name,
+        .content__date {
+            width: 20%;
+        }
+
+        .content__detail {
+            width: 30%;
+        }
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:767px) {
+    .table {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .table-up, .table-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .table-left p {
+                width: 100%;
+                font-weight: 700;
+                text-decoration: underline;
+                text-align: center;
+            }
+
+            .table-right {
+                width: 100%;
+            }
+
+            .table-subtitle {
+                font-size: 14px;
+            }
+        }
+
+        .table__content-above,
+        .table__content-below {
+            display: flex;
+            justify-content: space-between;
+
+            .table-subtitle,
+            .content__name,
+            .content__detail,
+            .content__date {
+                font-size: 13px;
+            }
+        }
+    }
+}

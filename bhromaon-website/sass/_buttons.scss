@@ -1,0 +1,45 @@
+.btn-custom {
+    background-color: colors.$custom-button-color;
+    color: colors.$custom-text-color;
+    cursor: pointer;
+    &:hover {
+        background: colors.$placeholder-color;
+    }
+
+    &:focus {
+        background-color: colors.$button-focused-color;
+        text-decoration: underline;
+    }
+}
+
+.img-one,
+.img-two,
+.img-six,
+.img-seven {
+    .btn:focus {
+        background-color: colors.$button-focused-color;
+        text-decoration: underline;
+    }
+}
+
+.img-one {
+    .btn {
+        font-size: fonts.$xxsmall_font_size;
+        letter-spacing: fonts.$xxxsmall_letter_spacing;
+    }
+}
+
+.img-two {
+    .btn {
+        font-family: fonts.$secondary_font-family;
+        letter-spacing: fonts.$xxxxsmall_letter_spacing;
+    }
+}
+
+.img-six,
+.img-seven {
+    .btn {
+        width: 180px;
+        height: 53px;
+    }
+}

@@ -1,0 +1,123 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html .navbar-brand,
+body .navbar-brand {
+  cursor: default;
+}
+html #navbarSupportedContent .nav-link:hover,
+body #navbarSupportedContent .nav-link:hover {
+  background: #77B3AE;
+  color: black;
+}
+html #navbarSupportedContent .nav-link:focus,
+body #navbarSupportedContent .nav-link:focus {
+  color: #77B3AE;
+  background: black;
+}
+html .button-submit:focus,
+body .button-submit:focus {
+  color: #77B3AE;
+  background: black;
+}
+html .carousel-control-prev-icon::after,
+html .carousel-control-next-icon::after,
+body .carousel-control-prev-icon::after,
+body .carousel-control-next-icon::after {
+  content: "";
+}
+html .card-container,
+body .card-container {
+  width: 100%;
+}
+html .card-container .card img,
+body .card-container .card img {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30vh;
+}
+html .card-container .card .card-body,
+body .card-container .card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+html .card-container .card .card-body .card-text,
+body .card-container .card .card-body .card-text {
+  text-align: justify;
+}
+html .card-container .card .card-body a:focus,
+body .card-container .card .card-body a:focus {
+  color: #77B3AE;
+  background: black;
+}
+html .card-container .card .card-body .detail-button,
+body .card-container .card .card-body .detail-button {
+  max-width: 50%;
+  min-width: fit-content;
+}
+html .row p,
+body .row p {
+  width: 100%;
+}
+html footer,
+body footer {
+  background: black;
+  padding: 2% 0;
+}
+html footer .single-box p,
+body footer .single-box p {
+  color: white;
+  line-height: 1.9;
+}
+html footer .socials i,
+body footer .socials i {
+  font-size: 20px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+html footer .socials i:hover,
+body footer .socials i:hover {
+  background: black;
+  color: #77B3AE;
+}
+
+.single-box ul {
+  list-style: none;
+  padding: 0;
+}
+.single-box ul li a {
+  text-decoration: none;
+  color: white;
+  line-height: 2.5;
+  font-weight: 100;
+}
+.single-box ul li a:hover {
+  background-color: #0BBCBA;
+}
+.single-box .input-group #basic-addon2 {
+  background: #0BBCBA;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .mask h1 {
+    padding: 0 1rem 0 1rem;
+  }
+  .single-box {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .single-box {
+    margin-bottom: 50px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

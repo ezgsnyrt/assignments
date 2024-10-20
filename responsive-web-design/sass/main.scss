@@ -1,0 +1,98 @@
+@use 'fonts';
+@import "../node_modules/normalize-scss/sass/normalize";
+@import 'mixins';
+@import 'header/header';
+@import 'image';
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.wrapper{
+    width: 60%;
+    height: 100%;
+    margin: auto 20%;
+
+    &__content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+// content other than header starts here
+.container__content{
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .card{
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5% 0 5% 0;
+    
+        &-info p{
+            font-family: fonts.$link_font-family;            
+            font-weight: fonts.$logo_font-weight;  
+            font-style: fonts.$link_font-style;
+            font-size: fonts.$para_font-size;  
+            line-height: fonts.$para_line-height;
+            color: fonts.$logo_colors; 
+            font-optical-sizing: fonts.$para_font-optical-sizing;
+            text-align: center;
+            
+            @media only screen and (min-width:320px) and (max-width:767px) {
+                font-family: fonts.$link_font-family;
+                font-weight: fonts.$logo_font-weight;
+                font-size: fonts.$para_mobile_font-size;
+                line-height: fonts.$para_mobile_line-height;
+            }
+
+            @media only screen and (min-width:768px) and (max-width:1439px){
+                font-family: fonts.$para_font-size; 
+                line-height: fonts.$para_line-height; 
+            }
+        }
+    }
+}
+
+h1{
+    font-family: fonts.$head_font-family;
+    font-weight: fonts.$head_font-weight;
+    font-style: fonts.$link_font-style;
+    font-size: fonts.$head_font-size;
+    line-height: fonts.$head_line-height;
+    color: fonts.$logo_colors; 
+    margin: 0;
+
+    @media only screen and (min-width:320px) and (max-width:767px) {
+    font-weight: fonts.$head_font-weight;
+    font-size: fonts.$head_mobile_font-size;
+    line-height: fonts.$head_mobile_line-height;
+    }
+
+    @media only screen and (min-width:768px) and (max-width:1439px){
+    font-size: fonts.$head_tablet_font-size;
+    }
+}
+
+span{
+    display: block;
+
+    @media only screen and (min-width:320px) and (max-width:767px) {
+        display:inline;
+    }
+
+}
+

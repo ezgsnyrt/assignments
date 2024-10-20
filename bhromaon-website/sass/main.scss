@@ -1,0 +1,504 @@
+@use "fonts";
+@use "colors";
+@import "../node_modules/normalize-scss/sass/normalize";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import 'buttons';
+
+.background-image {
+    top: 0;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &.img-one {
+        min-height: 820px;
+        background-image: url("../images/image-one.png");
+
+        .overlay-container {
+            flex-direction: column;
+
+            h1,
+            h6,
+            input,
+            .btn,
+            span {
+                font-family: fonts.$primary_font-family;
+            }
+
+            h1,
+            h6,
+            .btn,
+            span {
+                color: colors.$custom-text-color;
+            }
+
+            h1 {
+                letter-spacing: fonts.$xlarge_letter_spacing;
+            }
+
+            h6 {
+                font-weight: fonts.$regular_font_weight;
+                letter-spacing: fonts.$xxlarge_letter_spacing;
+                font-size: fonts.$medium_font_size;
+            }
+
+                input {
+                    border: none;
+                    font-size: fonts.$xxsmall_font_size;
+                    letter-spacing: fonts.$medium_letter_spacing;
+                    color: colors.$placeholder-color;
+
+                    &:focus {
+                        background-color: colors.$button-focused-color;
+                    }
+                }
+
+            span {
+                font-size: fonts.$xxsmall_font_size;
+                letter-spacing: fonts.$medium_letter_spacing;
+            }
+        }
+    }
+
+    &.img-two {
+        min-height: 685px;
+        background-image: url("../images/image-two.png");
+
+        .card-heading {
+            font-size: fonts.$xlarge_font_size;
+            font-family: fonts.$secondary_font-family;
+        }
+
+        .card-info {
+            font-family: fonts.$primary_font-family;
+            font-size: fonts.$xsmall_font_size;
+            letter-spacing: fonts.$xsmall_letter_spacing;
+        }
+
+        .image-container:nth-child(1) {
+            margin-bottom: 2%;
+        }
+    }
+
+    &.img-square {
+        min-height: 337px;
+        background-image: url("../images/image-square.png");
+    }
+
+    .overlay-container {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        border-radius: 10px;
+
+        .navbar {
+            bottom: 0;
+            height: 10%;
+            background-color: colors.$custom-button-color;
+            position: absolute;
+            width: 100%;
+
+            .navbar-brand {
+                font-size: fonts.$large_font_size;
+                letter-spacing: fonts.$small_letter_spacing;
+                font-weight: fonts.$bold_font_weight;
+                cursor: default;
+            }
+
+            li a {
+                font-size: fonts.$xxsmall_font_size;
+                font-family: fonts.$secondary_font-family;
+
+                &:focus {
+                    background-color: colors.$button-focused-color;
+                    text-decoration: underline;
+                }
+            }
+
+            li:hover {
+                background-color: colors.$custom-background-color;
+            }
+        }
+    }
+
+    &.img-six {
+        min-height: 700px;
+        background-image: url("../images/image-six.png");
+
+        .overlay-container {
+            position: absolute;
+            left:10%;
+            width: 80%;
+            height: 100%;
+            border-radius: 0;
+
+            .card-container {
+                .card {
+                    background-color: colors.$background-color;
+                    color: colors.$custom-text-color;
+                    opacity: .9;
+                    border-radius: 0%;
+
+                    .card-heading {
+                        font-size: fonts.$small_font_size;
+                        letter-spacing: fonts.$xxsmall_letter_spacing;
+                    }
+
+                    .card-body h5:nth-child(2) {
+                        font-size: fonts.$small_font_size;
+                    }
+
+                    .card-info {
+                        font-size: fonts.$xsmall_font_size;
+                        font-family: fonts.$primary_font-family;
+                    }
+                }
+            }
+        }
+    }
+
+    &.img-seven {
+        min-height: 700px;
+        background-image: url("../images/image-seven.png");
+
+        .overlay-container {
+            position: absolute;
+            right:10%;
+            width: 80%;
+            height: 100%;
+            border-radius: 0;
+
+            .card-container {
+                .card {
+                    background-color: colors.$background-color;
+                    color: colors.$custom-text-color;
+                    opacity: .9;
+                    border-radius: 0%;
+
+                    .card-heading {
+                        font-size: fonts.$small_font_size;
+                        letter-spacing: fonts.$xxsmall_letter_spacing;
+                    }
+
+                    .card-body h5:nth-child(2) {
+                        font-size: fonts.$small_font_size;
+                    }
+
+                    .card-info {
+                        font-size: fonts.$xsmall_font_size;
+                        font-family: fonts.$primary_font-family;
+                    }
+                }
+            }
+        }
+    }
+
+    &.img-eight {
+        min-height: 731px;
+        background-image: url("../images/image-eight.png");
+        display: flex;
+        justify-content: center;
+
+        .overlay-container {
+            position: absolute;
+            flex-direction: column;
+            width: 60%;
+            height: 100%;
+            border-radius: 0;
+
+            h2 {
+                margin-bottom: 10%;
+                color: colors.$custom-text-color;
+                font-size: fonts.$xlarge_font_size;
+            }
+
+
+            .card-container {
+                margin-top: 0;
+
+                .image-container {
+                    width: 40%;
+                    height: 100% !important;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+
+                .card {
+                    width: 60%;
+                    border: none;
+                    background-color: colors.$custom-background-color;
+                    border-radius: 0%;
+
+                    .card-body {
+                        h5 {
+                            font-size: fonts.$small_font_size;
+                            font-family: fonts.$primary_font-family;
+                            font-weight: fonts.$light_font_weight;
+                        }
+
+                        p {
+                            font-size: fonts.$xsmall_font_size;
+                            font-family: fonts.$primary_font-family;
+                            line-height: fonts.$high_line_height;
+
+                            .fa-quote-left {
+                                color: colors.$custom-button-color;
+                                font-size: fonts.$xlarge_font_size;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card-container {
+    margin-top: 5%;
+
+    .card {
+        border: none;
+        padding: 20px;
+    }
+}
+
+.image-container {
+    height: 45%;
+
+    img {
+        width: 100%;
+    }
+}
+
+//!! add calculation to make the icons move together !!
+.icon-container {
+    width: 65%;
+    margin-top: 4%;
+
+    .icon-group {
+        width: 100%;
+        max-width: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url("../images/image-square.png");
+        z-index: 1; // let each icon have the same background image (also get rid of the transparency problem in the background)
+
+        p {
+            text-align: center;
+            font-family: fonts.$secondary_font-family;
+            font-size: fonts.$xlarge_font_size;
+        }
+
+        img {
+            margin-top: 1%;
+        }
+    }
+
+    .line-image {
+        left: 28.5%;
+        top: 24%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.footer {
+    .footer-title,
+    .footer-subtitle {
+        font-family: fonts.$primary_font-family;
+    }
+
+    .footer-title {
+        font-size: fonts.$large_font_size;
+        letter-spacing: fonts.$large_letter_spacing;
+        font-weight: fonts.$bold_font_weight;
+        margin-top: 4rem;
+        text-align: center;
+    }
+
+    .footer-subtitle {
+        font-size: fonts.$xsmall_font_size;
+        letter-spacing: fonts.$xsmall_letter_spacing;
+    }
+
+    .list-inline-item a {
+        &:hover {
+            background-color: colors.$link-color;
+        }
+
+        &:focus {
+            background-color: colors.$button-focused-color;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+//Make the project responsive for large screen sizes
+@media (max-width: 1440px) {
+    .img-one h6 {
+        font-size: fonts.$xxxsmall_font_size;
+        text-align: center;
+    }
+
+    .icon-container {
+        justify-content: space-between !important;
+        width: 62% !important;
+
+        .line-image {
+            top: 20% !important;
+            left: 22.7% !important;
+        }
+    }
+
+    .img-eight {
+        .overlay-container {
+            h2 {
+                font-size: fonts.$xlarge_font_size;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .icon-container {
+        justify-content: space-between !important;
+        width: 70% !important;
+
+        .icon-group {
+            img {
+                margin-top: 5% !important;
+            }
+        }
+
+        .line-image {
+            width: 60% !important;
+            top: 23% !important;
+            left: 19.8% !important;
+        }
+    }
+
+    .img-eight {
+        .overlay-container {
+            width: 80% !important;
+
+            .card-container {
+                // flex-direction: column !important;
+
+                .image-container {
+                    width: 40% ;
+                    height: auto !important;
+                }
+            }
+        }
+    }
+}
+
+/* Center content on medium screens and smaller */
+@media (max-width: 768px) {
+    .background-left,
+    .background-right {
+        width: 100%;
+    }
+    .overlay-container {
+        width: 100%;
+        left: 0 !important;
+        justify-content: center;
+    }
+
+    .img-two {
+        .overlay-container {
+            flex-direction: column !important;
+
+            div:nth-child(2) {
+                display: flex;
+                flex-direction: row;
+
+                .image-container {
+                    width: 100%;
+                    display: flex !important;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    .img-eight {
+        .overlay-container {
+            width: 100% !important;
+
+            .card-container {
+                width: 100%;
+
+                .card {
+                    align-self: center;
+                }
+
+                .image-container {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* Center content on medium screens and smaller */
+@media (max-width: 576px) {
+    .input-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .icon-container {
+        .icon-group {
+            p {
+                font-size: fonts.$xxxsmall_font_size;
+            }
+        }
+    }
+
+    .img-eight {
+        .overlay-container {
+            h2 {
+                font-size: 24px;
+            }
+            .card-container {
+                width: 100%;
+                flex-direction: column !important;
+
+                .image-container {
+                    width: 100% !important;
+                }
+
+                .card {
+                    width: 100% !important;
+                    padding: 0 !important;
+                    margin: 0 !important;
+
+                    .card-body {
+                        h5 {
+                            font-size: 20px !important;
+                        }
+
+                        p {
+                            font-size: 14px !important;
+                            line-height: 1rem !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

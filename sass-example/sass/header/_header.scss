@@ -1,0 +1,124 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4%;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    & a {
+        text-decoration: none;
+    }
+
+        a:link {
+            color: black;
+        }
+
+        a:visited {
+            color: #496E58;
+        }
+
+        a:hover {
+            color: #DB7F55;
+        }
+
+        a:focus {
+            color: white;
+            background: #496E58;
+        }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav__list {
+        width: 18%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+li {
+    list-style: none;
+    font-size: 18px;
+}
+// li was not nested with nav__list because of the difference in element name in footer
+
+
+
+
+
+/* Responsive Design for Navigation*/
+@media only screen and (min-width:1440px) and (max-width:1800px) {
+    header {
+        width: 100%;
+        margin-bottom: 3%;
+    }
+
+    nav {
+        .logo {
+            font-size: 30px;
+        }
+
+        .nav__list {
+            width: 25%;
+        }
+    }
+
+    li {
+        list-style: none;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1439px) {
+    header {
+        margin-bottom: 5%;
+    }
+
+    nav {
+        .logo {
+            width: 20%;
+            font-size: 26px;
+        }
+
+        .nav__list {
+            width: 32%;
+        }
+    }
+}
+
+
+@media only screen and (min-width:320px) and (max-width:767px) {
+    header {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+
+        .logo {
+            font-size: 20px;
+            width: 20%;
+        }
+
+        .nav__list {
+            width: 57%;
+        }
+    }
+
+    li {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+

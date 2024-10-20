@@ -1,0 +1,499 @@
+/* Styling for navigation */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Cormorant", serif;
+}
+
+.container-up {
+  background-color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../images/background.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  background-repeat: no-repeat;
+}
+.container-up .navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-up .navbar .logo img {
+  width: 20%;
+  float: left;
+  padding: 5% 0 0 6%;
+  filter: invert(1);
+  position: relative;
+  display: inline-block;
+  animation-name: mylogo;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.container-up .navbar .nav-link {
+  display: flex;
+}
+.container-up .navbar .nav-link li {
+  display: inline-block;
+  cursor: pointer;
+}
+.container-up .navbar .nav-link li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 20px;
+}
+.container-up .navbar .nav-link li a:hover {
+  background: #fff;
+  color: #333;
+}
+.container-up .navbar .nav-link li a:focus {
+  background: #333;
+  color: #fff;
+}
+.container-up .welcome-text {
+  width: 100%;
+  position: absolute;
+  display: inline-block;
+  color: #fff;
+  font-size: 1.75rem;
+  font-style: italic;
+  bottom: 40%;
+  text-align: center;
+}
+.container-up .welcome-text h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+/* Details of the keyframe animation */
+@keyframes mylogo {
+  from {
+    transform: rotateX(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  to {
+    transform: rotate(15deg);
+  }
+}
+:root {
+  --offset: fonts.$xxl-font-size;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  background: #B57D12;
+  position: relative;
+  animation: example 20s infinite;
+}
+
+.container-mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.container-mid .card-set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 5rem 5rem;
+  max-width: 150rem;
+  width: 100%;
+}
+.container-mid .card-set .card-content {
+  position: relative;
+  overflow: hidden;
+  max-width: 33rem;
+  padding: 1% 1%;
+  width: 100%;
+  color: #fff;
+  background: #000000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.container-mid .card-set .card-content img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  backface-visibility: hidden;
+  vertical-align: top;
+  transition: all 0.3s ease;
+}
+.container-mid .card-set .card-content figcaption { /* Use of figcation for styling */
+  position: absolute;
+  text-align: center;
+  top: 50%; /* Since .card-content has a position:absolute, top:50% refers to figcaption element should be halfway down the height of its containing element w/class card-content */
+  left: 50%;
+  max-width: 20rem;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.card::before,
+.card::after {
+  position: absolute;
+  content: "";
+  background: #fff; /* corner details */
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.top-left::before,
+.top-left::after {
+  top: var(--offset);
+  left: var(--offset);
+}
+
+.top-right::before,
+.top-right::after {
+  top: var(--offset);
+  right: var(--offset);
+}
+
+.bottom-right::before,
+.bottom-right::after {
+  bottom: var(--offset);
+  right: var(--offset);
+}
+
+.bottom-left::before,
+.bottom-left::after {
+  bottom: var(--offset);
+  left: var(--offset);
+}
+
+.card::before { /* Corner details */
+  width: 0px;
+  height: 1px;
+}
+
+.card::after {
+  height: 0px;
+  width: 1px;
+}
+
+.card-content h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  opacity: 0;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1rem;
+  transition: all 0.4s ease;
+}
+
+.card-content p {
+  opacity: 0;
+  font-size: 1rem;
+  transition: all 0.4s ease;
+}
+
+.card-content:hover img {
+  zoom: 1;
+  filter: alpha(opacity=20);
+  opacity: 0.3;
+}
+
+.card-content:hover .card::before {
+  width: 40px;
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+.card-content:hover .card::after {
+  height: 40px;
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+.card-content:hover h3 {
+  opacity: 1;
+  transition-delay: 0.25s;
+}
+
+.card-content:hover p {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+@keyframes example {
+  from {
+    left: 0px;
+  }
+  to {
+    left: calc(100% - 20px);
+  }
+}
+/* Styling for footer */
+.container-bottom {
+  font-size: 1.75rem;
+  color: #fff;
+  width: 100%;
+}
+.container-bottom a {
+  color: #fff;
+}
+.container-bottom .footer-up {
+  background-color: #132736;
+  padding-top: 3%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.container-bottom .footer-up .footer-content {
+  margin: 0 2%;
+}
+.container-bottom .footer-up .footer-content h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1%;
+  text-align: center;
+}
+.container-bottom .footer-up .footer-content .list {
+  text-align: center;
+  padding: 0;
+}
+.container-bottom .footer-up .footer-content .list li {
+  width: auto;
+  text-align: center;
+  list-style: none;
+  padding: 5%;
+  position: relative;
+}
+.container-bottom .footer-up .footer-content .list li::before {
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition-duration: 0.6s; /* Transition for quick links */
+}
+.container-bottom .footer-up .footer-content .list li:hover::before {
+  width: 70px;
+}
+.container-bottom .footer-up .footer-content .list li a {
+  text-decoration: none;
+}
+.container-bottom .footer-up .footer-content .list li a:hover {
+  color: #5B6D7D;
+}
+.container-bottom .footer-up .footer-content .list li a:focus {
+  color: #000000;
+  background: #fff;
+}
+.container-bottom .footer-up .footer-content .social-icon {
+  text-align: justify;
+  list-style: none;
+  padding: 0;
+  margin: 0 1%;
+  color: #fff;
+  font-size: 1.3rem;
+}
+.container-bottom .footer-up .footer-content .social-icon li {
+  display: inline-block;
+  padding: 1% 1.5%;
+}
+.container-bottom .footer-up .footer-content .social-icon i:hover {
+  color: #BD8811;
+}
+.container-bottom .footer-up .footer-content .social-icon a:focus {
+  color: #000000;
+  background: #fff;
+}
+.container-bottom .footer-bottom {
+  background: #BD8811;
+  text-align: center;
+  padding: 1% 1%;
+}
+.container-bottom .footer-bottom p {
+  color: #132736;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.nav-toggle {
+  display: none;
+  border-radius: 5%;
+  border: 0;
+}
+
+.show {
+  display: flex;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .container-up {
+    width: 100%;
+    height: 60vh;
+  }
+  .container-up h1 {
+    font-size: 1.5rem;
+  }
+  .container-up .navbar .logo {
+    padding: 1% 0 0 2%;
+  }
+  .container-up .navbar .logo img {
+    min-width: 40px;
+    max-width: 90px;
+  }
+  .container-up .navbar .nav-link {
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    background-color: #5B6D7D;
+  }
+  .container-up .navbar .nav-link li {
+    margin: 1rem 0;
+  }
+  .container-up .navbar .show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-up .navbar .nav-toggle {
+    padding: 1%;
+    margin: 2%;
+    display: block;
+    cursor: pointer;
+  }
+  .container-up .navbar .nav-toggle .fa-ellipsis {
+    font-size: 1.7rem;
+  }
+  .container-up .welcome-text h1 {
+    font-size: 1.75rem;
+  }
+  .container-up .welcome-text p {
+    font-size: 1.5rem;
+  }
+  .footer-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+  .footer-up .footer-content:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .footer-up .footer-content:nth-child(1) h2 {
+    font-size: 1.7rem;
+  }
+  .footer-up .footer-content:nth-child(1) p {
+    display: block;
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 2%;
+    text-align: center;
+  }
+  .footer-up .footer-content:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 49%;
+  }
+  .footer-up .footer-content:nth-child(2) h2 {
+    font-size: 1.7rem;
+    padding: 2%;
+    margin: 0;
+  }
+  .footer-up .footer-content:nth-child(2) .list {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-up .footer-content:nth-child(2) .list li {
+    padding: 0 2% 0 2%;
+  }
+  .footer-up .footer-content:nth-child(2) .list li a {
+    font-size: 1.1rem;
+  }
+  .footer-up .footer-content:nth-child(2) .list li a:hover {
+    width: 100%;
+  }
+  .footer-up .footer-content:nth-child(3) {
+    width: 100%;
+    margin-top: 2%;
+  }
+  .footer-up .footer-content:nth-child(3) .social-icon {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-up .footer-content:nth-child(3) .social-icon li {
+    padding: 4%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .container-up {
+    height: 55vh;
+  }
+  .container-up .logo {
+    padding-left: 3%;
+  }
+  .container-up .logo img {
+    width: 18%;
+    min-width: 44px;
+  }
+  .container-up .nav-link li a {
+    font-size: 1.3rem;
+  }
+  .container-up .welcome-text h1 {
+    font-size: 2.8rem;
+    padding-left: 0;
+  }
+  .container-up .welcome-text p {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+  .container-bottom .footer-up {
+    justify-content: center;
+    height: 50vh;
+  }
+  .container-bottom .footer-up .footer-content {
+    margin: 2%;
+    padding-right: 3%;
+  }
+  .container-bottom .footer-up .footer-content h2 {
+    font-size: 2rem;
+  }
+  .container-bottom .footer-up .footer-content p {
+    font-size: 1.5rem;
+  }
+  .container-bottom .footer-up .footer-content li a {
+    font-size: 1.5rem;
+  }
+  .container-bottom .footer-up .footer-content .social-icon {
+    font-size: 1.3rem;
+    text-align: justify;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .container-up {
+    height: 50vh;
+  }
+  .container-up .nav-link li a {
+    font-size: 1.7rem;
+  }
+  .footer-up {
+    height: 60vh;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,122 @@
+footer {
+    width: 100%;
+    margin-top: 4%;
+    display: flex;
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer__list {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+
+    .media__list {
+        width: 15%;
+        display: flex;
+        justify-content: space-between;
+
+        & a {
+            font-size: 24px;
+            color: black;
+        }
+
+        & a:hover {
+            color: turquoise;
+        }
+    }
+
+    .link__list {
+        width: 35%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+/* Responsive Design for Footer */
+
+@media only screen and (min-width:1440px) and (max-width:1800px) {
+    .footer__list {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+
+        .link__list {
+            width: 100%;
+
+            .nav__li {
+                padding-right: 3rem;
+            }
+        }
+
+        .media__list {
+            width: 30%;
+        }
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1439px) {
+    .footer__list {
+        width: 65%;
+        display: flex;
+        justify-content: space-between;
+
+        .link__list {
+            display: flex;
+            justify-content: flex-start;
+
+            .nav__li {
+                padding-right: 3rem;
+            }
+        }
+
+        .media__list {
+            width: 20%;
+        }
+    }
+}
+
+
+@media only screen and (min-width:320px) and (max-width:767px) {
+    footer nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .logo {
+            font-size: 18px;
+        }
+
+        .footer__list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .link__list {
+                width: 70%;
+                padding: 0 3%;
+
+                .nav__li {
+                    font-size: 18px;
+                }
+            }
+
+            .media__list {
+                width: 30%;
+                padding: 0 3%;
+
+                li {
+                    gap: 2%;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
