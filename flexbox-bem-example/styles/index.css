@@ -1,0 +1,214 @@
+.screen{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.screen--dark{
+    background-color: #300717; 
+    flex-direction: column;
+    justify-content: center;
+}
+.frame{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 20px;
+    margin: 10px 20px 10px;
+}
+.screen--dark .frame__block{
+    display: flex;
+    width: 468px;
+    height: 160px;
+    background-color: #F28105;
+    margin: 10px 20px;
+    padding: 20px;
+}
+.box{
+    background-color:#92020A;
+    padding: 10px;
+    margin: 10px;
+    width: 80px;
+    height: 80px;
+    display:flex;
+    border-radius: 5%;
+}
+
+.box--alignend{
+    align-self: flex-end;
+}   /*For this item, a modifier was created.*/
+
+.box--alignmid{
+    align-self: flex-start;;
+}   /*For this item, a modifier was created.*/ /*For the other boxes in the same frame block, align-self:flex-end*/
+
+.box__vertical{
+    background-color:#92020A;
+    padding: 10px;
+    margin: 10px;
+    width: 80px;
+    /*height: 80px;*/
+    display:flex; 
+    border-radius: 5%; 
+}
+
+.box__horizontal{
+    background-color:#92020A;
+    padding: 10px;
+    margin: 10px;
+    width: 80px;
+    height: 80px;
+    display:flex;
+    flex-basis:50%;
+    border-radius: 5%;
+}
+
+.frame__block--upleft{
+    justify-content: flex-start;
+    align-items: flex-end;
+} 
+
+.frame__block--upright{
+    justify-content: center; 
+    align-items: stretch;
+} 
+
+.frame__block--midleft{
+    justify-content: flex-end;
+    align-items: center;
+} 
+
+.frame__block--midright{
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.screen--dark .frame__block--bottomleft{
+    justify-content: space-evenly;
+    align-content: baseline;
+    align-self: flex-end;
+}
+
+.box__content{
+    color:white;
+}
+
+.frame__block--bottomright{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The following part was created for the second part of the assignment.*/
+.screen--light{
+    margin-top: 20px;
+    background-color: #F99906;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.screen--light .frame{
+    max-width: 100%;
+    height: 100vh;
+    background-color: #F99906;
+    margin: 10px 20px 10px;
+    justify-content: center;
+}
+.frame--up{
+    align-items:flex-end;
+}
+
+.frame--bottom{
+    align-items:flex-start;
+}
+
+.screen--light .frame__block{
+    width: 273px;
+    height: 220px;
+    background-color: #5F0511;
+    display:flex;
+    flex-direction: row;
+    margin-left:20px;
+    margin-right:20px;
+ 
+}
+
+.frame--up .frame__block:nth-child(odd) {
+    background-color:#04091C;
+}
+
+.frame--bottom .frame__block:nth-child(2) {
+    background-color:#04091C;
+}
+
+.screen--light .frame__block--bottomright{
+    visibility:hidden;
+}
+
+.circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #6981A1;
+    padding:5px;
+}
+
+.frame--up .frame__block--upleft{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+    align-content: flex-start;
+}
+
+.frame__block--upleft .circle{
+    margin-top: 10px;
+    margin-left:10px;
+}
+
+.frame--up .frame__block--upmid{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    flex-wrap: wrap-reverse;
+    align-content:flex-start;
+}
+.frame__block--upmid .circle{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.frame--up .frame__block--upright{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.frame__block--upright .circle{
+    margin-top:10px;
+    margin-left:10px;
+    margin-bottom:10px;
+}
+
+.frame--bottom .frame__block--bottomleft{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.frame__block--bottomleft .circle{
+    margin:10px;
+}
+
+.frame--bottom .frame__block--bottommid{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content:center;
+}
+
+.frame__block--bottommid .circle{
+    margin:10px;
+}
+
