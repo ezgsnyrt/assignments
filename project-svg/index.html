@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating My Own SVGs</title>
+    <link rel="stylesheet" href="styles/normalize.css"> 
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <div class="container">
+        <!--SVG example created in the html document-->
+        <div class="container--left">
+            <div class="container--left_clock"> 
+                <svg  width="320" height="320" viewbox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="110" cy="110" r="100" stroke-width="10" fill="black" stroke=" black"/>
+                    <polyline points="50,115 115,115 115,50 " stroke="white" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="container--right">
+            <div class="container--right_crown">
+                <img src="images/crown.svg" />
+            </div>
+        </div>
+        <div class="container--mid">   <!--external svg-->
+            <div class="star">
+                <svg viewBox="0 0 320 512">
+                    <use xlink:href="images/star.svg#star"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

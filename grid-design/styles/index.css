@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grid__container{
+    display: grid;
+    grid-gap: 1rem;
+    width: 100vw;
+    height: 80vh;
+    background-color: white;
+    grid-template-rows: 60% 40%; 
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.grid__container-row {
+    display: grid;
+    gap: 1rem;
+}
+
+.up{
+    grid-template-columns: minmax(0, 33%) minmax(0, 33%) minmax(0, 33%);
+}
+
+.bottom{
+    grid-template-columns: 33% minmax(0, 17%) 33% minmax(0, 17%);
+}
+
+.grid__container-column{
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.first{
+    background-color:#377D61; 
+}
+
+.second{
+    background-color:#4C9150;
+}
+
+.third{
+    background-color:#8CB83D;  
+}
+
+.forth{
+    background-color:#DDDF49;
+}
+
+.fifth{
+    background-color:#EEEF55;
+}
+
+.sixth{
+    background-color:#FFFF67;
+}
+
+.seventh{
+    background-color:#69A443;  
+}
+
+.eighth{
+    background-color:#B1CB40;  
+}
+
+.nineth{
+    background-color:#C3D143;   
+}
+
+.tenth{
+    background-color:#D5D746;   
+}
+
+.eleventh{
+    background-color:#377D61;   
+}
+
+.box{
+    height: 20vh;
+    background-color:#A3C0BC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.text{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    padding-left: 1rem;
+}
+
+

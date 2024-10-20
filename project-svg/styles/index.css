@@ -1,0 +1,25 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.container--left{
+    width: 90%;
+    padding: 2%;
+}
+
+.container--right{
+    width:20%;
+    padding: 1%;
+}
+
+img{
+    width: 40%;
+}
+
+.container--mid{
+    width:50%;
+    padding: 1%;
+} 
