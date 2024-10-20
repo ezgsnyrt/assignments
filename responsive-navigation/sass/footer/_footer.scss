@@ -1,0 +1,16 @@
+footer {
+    height: 8vh;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    left: 25%;
+    padding: 30px;
+    color: colors.$footer_colors;
+    font-size: fonts.$header-middle_font-size;
+    .copyright {
+        text-align: center;
+    }
+    a {
+        text-decoration: none;
+    }
+}

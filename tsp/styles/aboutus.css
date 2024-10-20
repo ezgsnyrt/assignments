@@ -1,0 +1,477 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inknut Antiqua", serif;
+}
+
+/*Navigation*/
+.container {
+  width: 100%;
+  display: flex;
+  position: sticky; /* I changed here so header is not going away*/
+  top: 0; /* I changed here so header is not going away*/
+  bottom: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.navbar {
+  width: 100%;
+  background: #2dca4b;
+  /* left: 0; delete here*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*Position: fixed delete here*/
+  /* top: 0; delete here*/
+  /* height: 40%; delete here*/
+
+  height: 14vh; /* Height in terms of vh was added to reduce the height of navigation.*/
+}
+
+.logo {
+  width: 40%;
+  margin: 2%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.fa-artstation {
+  font-size: 70px; /* It was reduced from 100px to 70 px to reduce the hight of the navigation.  */
+  margin-right: 5%;
+}
+
+.logo a {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.navbar__link {
+  width: 40%;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+li {
+  display: inline-block;
+  margin: 3%;
+  font-size: 20px;
+}
+
+li a {
+  cursor: pointer;
+}
+
+li a:hover {
+  color: #879871;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.button {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  margin: 2%;
+}
+
+.btn {
+  width: 45%;
+  padding: 5%;
+  background-color: #34724e;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn--up {
+  background-color: #555555;
+}
+
+.btn:hover {
+  color: #c1c6bb;
+}
+
+/*Header*/
+
+.aboutus {
+  display: inline-block;
+  height: 30vh;
+  width: 100%;
+  background: url(/images/background.png) center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.polygon {
+  overflow: hidden;
+  position: absolute;
+  width: 40%;
+  left: 30%;
+  right: 0;
+  top: 15%;
+  z-index: -1;
+}
+.line {
+  justify-content: center;
+  align-self: center;
+  position: absolute;
+  top: 40%;
+  right: 25%;
+  width: 50%;
+}
+
+/*About our store*/
+.store {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.store p {
+  margin: 10%;
+  letter-spacing: 2px;
+}
+
+/*Our artists*/
+.our-artists {
+  margin-top: 10%;
+  text-align: center;
+}
+.artists-container {
+  margin-bottom: 5%;
+}
+.artist {
+  margin: 5%;
+}
+
+@keyframes reveal-image {
+  from {
+    clip-path: inset(30% round 20%);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+.artist-image {
+  animation: reveal-image linear both;
+  animation-timeline: view();
+  animation-range: contain 0% contain 50%;
+}
+/*Histroy */
+
+.history {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.history::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 400px;
+  background: url(/images/bike_background.png) center/ cover no-repeat;
+  -webkit-animation: zoom 10s 1;
+  animation: zoom 10s 1;
+  animation-fill-mode: forwards;
+  text-align: center;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+.history h3 {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+}
+.history p {
+  padding: 0% 10%;
+  position: absolute;
+  top: 25%;
+  left: 3%;
+  letter-spacing: 2px;
+}
+/*Awards */
+.awards {
+  height: auto;
+  width: 20%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 10% auto;
+}
+.bestTattooShop {
+  padding-bottom: 10%;
+}
+/*Feedback*/
+.feedback-container {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.feedback {
+  padding: 0 15% 15%;
+  position: relative;
+}
+
+.right {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+}
+.left {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+}
+.feedback-name-star {
+  padding-top: 15px;
+  display: flex;
+}
+.feedback-name-star h4 {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+/*Footer*/
+/* Changed to footer from .footer*/
+footer {
+  bottom: 0;
+  /* position: fixed;  We don't need to fixed here*/
+  background: #2dca4b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer__info-left {
+  width: 25%;
+  font-size: 20px;
+}
+
+.footer__info-right {
+  width: 12%;
+  padding-right: 5%;
+  font-size: 20px;
+  margin: 2%;
+}
+
+.footer__info-title {
+  font-weight: 700;
+}
+
+.footer__info-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.footer__info-detail-icon {
+  cursor: pointer;
+}
+
+.footer__info-detail-icon:hover {
+  color: #c1c6bb;
+}
+
+/*Responsible design*/
+
+@media (min-width: 320px) {
+  body {
+    font-size: 10px;
+  }
+  .aboutus h1 {
+    font-size: 2rem;
+  }
+  .aboutus h3 {
+    font-size: 1rem;
+  }
+
+  .store-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .history::before {
+    width: 100vw;
+  }
+  .hide {
+    display: none;
+  }
+  .awards {
+    max-width: 100%;
+    width: 200px;
+  }
+  .polygon {
+    max-width: 100%;
+    width: 50%;
+    top: 15%;
+    left: 25%;
+  }
+  .line {
+    max-width: 100%;
+    width: 50%;
+    top: 35%;
+    left: 25%;
+  }
+  .artist-image {
+    max-width: 100%;
+    width: 50%;
+  }
+}
+
+@media (min-width: 641px) {
+  .aboutus {
+    height: 13rem;
+    max-width: 65rem;
+    width: 100%;
+  }
+}
+@media (min-width: 800px) {
+  .aboutus {
+    height: 200px;
+    max-width: 65rem;
+    width: 100%;
+  }
+  .polygon {
+    width: 35%;
+    left: 33%;
+    right: 0;
+    top: 10%;
+  }
+}
+@media (min-width: 1008px) {
+  .aboutus {
+    background-size: cover;
+    width: 100%;
+    max-width: 90rem;
+    height: 15rem;
+    font-size: 23px;
+  }
+  .aboutus h1 {
+    font-size: 3.2rem;
+  }
+  .aboutus h3 {
+    font-size: 2rem;
+  }
+  .polygon {
+    width: 28%;
+    left: 36%;
+    top: 10%;
+  }
+  .line {
+    bottom: 33%;
+  }
+  /*About our store*/
+  .store {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .store-image {
+    margin-left: 10%;
+  }
+  /*Our artists*/
+  .artists-container {
+    margin: 3%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+  }
+  .artist-image {
+    width: 100%;
+  }
+
+  /*History*/
+  .histor::before {
+    width: 100%;
+    max-width: 100%;
+  }
+  .history h3 {
+    top: 20%;
+  }
+  .history p {
+    letter-spacing: 3px;
+    top: 40%;
+  }
+  /*Awards*/
+  .awards {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10%;
+  }
+  .bestTattooShop {
+    padding: 0% 20%;
+  }
+}
+@media (min-width: 1400px) {
+  .aboutus {
+    background-size: cover;
+    max-width: 100%;
+    width: 100vw;
+    height: 22rem;
+  }
+  .aboutus h1 {
+    padding-top: 1%;
+  }
+
+  .polygon {
+    width: 25%;
+    margin-left: 2rem;
+  }
+  .line {
+    top: 0;
+  }
+  .store-image {
+    width: 300rem;
+    max-width: 100%;
+  }
+
+  .artist p {
+    font-size: 1rem;
+  }
+  .store p,
+  .history,
+  .feedback p,
+  .feedback-name-star h4 {
+    font-size: 1.5rem;
+  }
+}

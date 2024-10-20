@@ -1,0 +1,192 @@
+.background-container{ 
+    background-image: url('pht9.jpg');
+      background-size: cover;
+      background-position: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    
+    html, body {
+        font-family: "Inknut Antiqua", serif;
+        font-weight: 300;
+        font-style: normal;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+    
+      
+    
+   
+    h2,h1 {text-align: center;
+        color:#2dca4b ;
+        cursor: default;
+    }
+    
+    .gallery-section1, .gallery-section2, .gallery-section3, .gallery-section4 {
+        margin-top: 50px;
+    }
+    
+    .gallery1, .gallery2, .gallery3, .gallery4 { 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .gallery1 img, .gallery2 img, .gallery3 img, .gallery4 img {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .gallery1 img:hover, .gallery2 img:hover, .gallery3 img:hover, .gallery4 img:hover {
+        transform: scale(1.8);
+    }
+  
+    .container {
+        width: 100%;
+        display: flex;
+        position: sticky; 
+        top: 0; 
+        bottom: 0;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 10;
+      }
+      
+      .navbar {
+        width: 100%;
+        background: #2dca4b;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+      }
+      
+      .logo {
+        width: 40%;
+        margin: 2%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      
+      .fa-artstation {
+        font-size: 100px;
+        margin-right: 5%;
+      }
+      
+      .logo a {
+        font-size: 40px;
+        font-weight: 600;
+      }
+      
+      .navbar__link {
+        width: 40%;
+      }
+
+
+
+
+      
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+      }
+      
+      li {
+        display: inline-block;
+        margin: 3%;
+        font-size: 20px;
+      }
+      
+      li a {
+        cursor: pointer;
+      }
+      
+      li a:hover {
+        color: #879871;
+      }
+      
+      nav a {
+        text-decoration: none;
+        color: black;
+      }
+      
+      .button {
+        width: 20%;
+        display: flex;
+        justify-content: space-around;
+        margin: 2%;
+      }
+      
+      .btn {
+        width: 45%;
+        padding: 5%;
+        background-color: #34724e;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+      
+      .btn--up {
+        background-color: #555555;
+      }
+      
+      .btn:hover {
+        color: #c1c6bb;
+      }
+      footer {
+        bottom: 0;
+        
+        background: #2dca4b;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .logo a {
+        text-decoration: none;
+        color: black;
+      }
+      
+      .footer__info-left {
+        width: 25%;
+        font-size: 20px;
+      }
+      
+      .footer__info-right {
+        width: 12%;
+        padding-right: 5%;
+        font-size: 20px;
+        margin: 2%;
+      }
+      
+      .footer__info-title {
+        font-weight: 700;
+      }
+      
+      .footer__info-detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        font-size: 20px;
+        font-weight: 300;
+      }
+      
+      .footer__info-detail-icon {
+        cursor: pointer;
+      }
+      
+      .footer__info-detail-icon:hover {
+        color: #c1c6bb;
+      }

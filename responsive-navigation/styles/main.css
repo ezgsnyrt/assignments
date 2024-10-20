@@ -1,0 +1,299 @@
+header {
+  width: 100%;
+  height: 17vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu {
+  width: 100%;
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .menu {
+    font-size: 24px;
+  }
+  .menu .menu__toggle {
+    width: 100%;
+    display: block;
+    right: 0;
+    top: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .menu .menu__toggle input {
+    display: block;
+    position: fixed;
+    left: 50px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+  .menu .menu__toggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #0B5ED5;
+  }
+  .menu .menu__toggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  .menu .menu__toggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  .menu .menu__toggle input:checked ~ .menu__item {
+    transform: none;
+  }
+  .menu .menu__toggle .nav__checkbox-label {
+    position: absolute;
+    left: 50px;
+  }
+  .menu .menu__toggle span,
+  .menu .menu__toggle span::before,
+  .menu .menu__toggle span::after {
+    display: block;
+    width: 33px;
+    height: 4px;
+    position: relative;
+    background: #0B5ED5;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.4s ease;
+  }
+  .menu .menu__toggle span:first-child,
+  .menu .menu__toggle span::before:first-child,
+  .menu .menu__toggle span::after:first-child {
+    transform-origin: 0% 0%;
+  }
+  .menu .menu__toggle span:nth-last-child(2),
+  .menu .menu__toggle span::before:nth-last-child(2),
+  .menu .menu__toggle span::after:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+  .menu .menu__toggle span::before,
+  .menu .menu__toggle span::after {
+    content: "";
+    position: absolute;
+  }
+  .menu .menu__toggle span::before {
+    top: 7px;
+  }
+  .menu .menu__toggle span::after {
+    bottom: 7px;
+  }
+  .menu .menu__toggle ul {
+    list-style: none;
+  }
+  .menu .menu__toggle a {
+    text-decoration: none;
+    color: #061728;
+    line-height: 2rem;
+    transition: all 0.3s ease;
+  }
+  .menu .menu__toggle a:hover {
+    color: #F48B88;
+  }
+  .menu .menu__toggle .menu__item {
+    position: absolute;
+    width: 100%;
+    padding: 30px;
+    padding-top: 125px;
+    right: 0;
+    margin: -100px 0 0 0;
+    background: #FBDFF3;
+    list-style-type: none;
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    font-size: 20px;
+    font-style: normal;
+    text-shadow: 2px 3px 3px #D4D4D4;
+  }
+  .menu .menu__toggle .menu__item li:hover {
+    background-color: #FEF6DA;
+  }
+  .menu .menu__toggle .menu__item li a:hover {
+    padding-left: 5px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+  .menu {
+    font-size: 20px;
+  }
+  .menu .menu__toggle {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .menu .menu__toggle ul {
+    list-style: none;
+  }
+  .menu .menu__toggle li {
+    display: inline-block;
+  }
+  .menu .menu__toggle a {
+    text-decoration: none;
+    color: #294968;
+    margin-right: 25px;
+    line-height: 2rem;
+  }
+  .menu .menu__toggle a:hover {
+    color: #F48B88;
+    text-decoration: underline;
+    background-color: #CFF1FE;
+  }
+  .menu .menu__toggle input {
+    display: none;
+  }
+  .menu .menu__toggle span {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .menu {
+    font-size: 26px;
+  }
+  .menu .menu__toggle {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .menu .menu__toggle ul {
+    list-style: none;
+  }
+  .menu .menu__toggle li {
+    display: inline-block;
+  }
+  .menu .menu__toggle a {
+    text-decoration: none;
+    color: #294968;
+    margin-right: 25px;
+    line-height: 2rem;
+  }
+  .menu .menu__toggle a:hover {
+    color: #F48B88;
+    text-decoration: underline;
+    background-color: #CFF1FE;
+  }
+  .menu .menu__toggle input {
+    display: none;
+  }
+  .menu .menu__toggle span {
+    display: none;
+  }
+}
+@keyframes text-slide-in {
+  0% {
+    -webkit-transform: translateX(100px);
+    -moz-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    -o-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+footer {
+  height: 8vh;
+  width: 50%;
+  position: fixed;
+  bottom: 0;
+  left: 25%;
+  padding: 30px;
+  color: white;
+  font-size: 20px;
+}
+footer .copyright {
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.content {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+}
+
+.content__detail {
+  width: 70%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+}
+.content__detail h1 {
+  color: #162232;
+  text-align: center;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .content__detail h1 {
+    font-family: "Encode Sans Semi Expanded", sans-serif;
+    font-size: 40px;
+    line-height: 2.5rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+  .content__detail h1 {
+    font-family: "Encode Sans Semi Expanded", sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 3rem;
+    color: #294968;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .content__detail h1 {
+    font-family: "Encode Sans Semi Expanded", sans-serif;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 3rem;
+    color: #294968;
+  }
+}
+.content__detail .content__info {
+  width: 100%;
+}
+.content__detail .content__info p {
+  color: #AF77C8;
+  line-height: 3rem;
+  text-align: center;
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .content__detail .content__info p {
+    font-size: 24px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

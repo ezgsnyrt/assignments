@@ -1,0 +1,80 @@
+@use 'fonts';
+@use 'colors';
+@import 'icon';
+@import "../node_modules/normalize-scss/sass/normalize";
+@import 'mixins';
+@import 'header/header';
+@import 'footer/footer';
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.content{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+}
+
+.content__detail{
+    width: 70%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+    h1 {
+        color: colors.$h1_colors;
+        text-align: center;
+        @media only screen and (min-width:320px) and (max-width:767px){
+            font-family:fonts.$header_font-family;
+            font-size: fonts.$title_small_font-size;
+            line-height: fonts.$title_small_line-height;
+        }
+
+
+        @media only screen and (min-width:768px) and (max-width:1439px){
+            font-family:fonts.$header_font-family;
+            font-weight: fonts.$title_middle_font-weight;
+            font-size: fonts.$title_middle_font-size;
+            line-height: fonts.$title_large_line-height;
+            color: colors.$middle_colors;
+        }
+
+
+        @media only screen and (min-width:1440px){
+            font-family:fonts.$header_font-family;
+            font-weight:fonts.$title_large_font-weight;
+            font-size: fonts.$title_large_font-size;
+            line-height: fonts.$title_large_line-height;
+            color: colors.$middle_colors;
+        }
+    }
+    .content__info {
+        width: 100%;
+        p {
+            color: colors.$content_colors;
+            line-height: fonts.$title_large_line-height;
+            text-align: center;
+            font-family: fonts.$header_font-family;
+            font-weight:fonts.$header_font-weight;
+            font-size: fonts.$general_font-size;
+            @media only screen and (min-width:320px) and (max-width:767px){
+            font-size:fonts.$header-small_font-size;
+            }
+        }
+    }
+}
+

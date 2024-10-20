@@ -1,0 +1,324 @@
+body {
+    background-color: #FFF; 
+    text-align: center;
+}
+
+.container{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    bottom: 0;
+}
+
+.navbar{
+    width: 100%;
+    background: #2AC342;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh; 
+    top: 0; 
+    position: sticky; 
+    z-index: 10;
+    font-family: "Inknut Antiqua", sans-serif;
+}   
+
+.logo{
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.fa-artstation{
+    font-size: 50px;
+    margin-right: 5%;
+}
+
+.logo a{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.navbar__link{
+    width: 40%;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+li{
+    display: inline-block;
+    margin: 2%;
+    font-size: 20px;
+}
+
+li a{
+    cursor:pointer;
+}
+
+li a:hover{
+    color: #879871;
+}
+
+nav a{
+    text-decoration: none;
+    color:black;
+}
+
+.button{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    margin: 2%;
+}
+
+.btn{
+    width: 45%;
+    padding: 2%; 
+    background-color: #2E6745;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: "Inknut Antiqua", sans-serif;
+}
+
+.btn--up{
+    background-color: #555555;
+}
+
+.btn:hover{
+    color: #C1C6BB;
+}
+
+.img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.green-line {
+    width: 550px;
+    height: 2px;
+    transform: translate(+60%, +32000%);
+}
+
+.header1 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Inknut Antiqua", sans-serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transform: translate(-0%, +445%);
+}
+
+.header2 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Inknut Antiqua", sans-serif;
+    font-size: 30px;
+    font-style:normal;
+    font-weight: 400;
+    line-height: normal;
+    transform: translate(-0%, +580%);
+}
+
+.form {
+    width: 514px;
+    height: 195px;
+    flex-shrink: 0;
+    fill: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.00) 133.33%);
+    stroke-width: 1px;
+    stroke: #FFF;
+    transform: translate(+66%, +140%);
+}
+
+.circle {
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+    fill: #FFF;
+    align-items: center;
+    justify-content: center;
+    /*transform: translate(-50%, -70%)*/
+}
+
+.address {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    position: absolute;
+    background-color: #FFF;
+    border-radius: 50%;
+    transform: translate(+110%, -210%);
+    }
+
+ .address img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+ }   
+
+.instagram {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    position: absolute;
+    background-color: #FFF;
+    border-radius: 50%;
+    transform: translate(+270%, -210%);
+}
+
+.instagram img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.facebook {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    position: absolute;
+    background-color: #FFF;
+    border-radius: 50%;
+    transform: translate(+440%, -210%);
+}
+
+.facebook img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; 
+}
+
+.youtube {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    position: absolute;
+    background-color: #FFF;
+    border-radius: 50%;
+    transform: translate(+600%, -210%);
+}
+
+.youtube img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.text {
+    width: 114px;
+    height: 13px;
+    transform: rotate(-0.639deg);
+    flex-shrink: 0;
+    color: #000;
+    text-align: center;
+    font-family: "Inknut Antiqua", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.text:hover {
+    color:#2AC342;
+}
+
+.text {
+    cursor: pointer;
+}
+
+.text1 {
+    width: 137px;
+    height: 26px;
+    flex-shrink: 0;
+    position: absolute;
+    background: #FFF;
+    transform: translate(+120%, -550%);
+}
+
+.text2 {
+    width: 137px;
+    height: 26px;
+    flex-shrink: 0;
+    position: absolute;
+    background: #FFF;
+    transform: translate(+300%, -550%);
+}
+
+.text3 {
+    width: 137px;
+    height: 26px;
+    flex-shrink: 0;
+    position: absolute;
+    background: #FFF;
+    transform: translate(+485%, -550%);
+}
+
+.text4 {
+    width: 137px;
+    height: 26px;
+    flex-shrink: 0;
+    position: absolute;
+    background: #FFF;
+    transform: translate(+665%, -550%);
+}
+
+footer{
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+    left:0;
+    background: #2AC342;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Inknut Antiqua", sans-serif;
+}
+
+.logo a{
+    text-decoration: none;
+    color:black;
+}
+
+.footer__info-left{
+    width: 25%;
+    font-size: 20px;
+    text-align: left;;
+}
+
+.footer__info-right{
+    width: 15%;
+    font-size: 20px;
+    text-align: left;
+}
+
+.footer__info-title{
+    font-weight: 700;
+}
+
+.footer__info-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 2rem; 
+}
+
+.footer__info-detail-icon{
+    cursor:pointer;
+}
+
+.footer__info-detail-icon:hover{
+    color: #C1C6BB
+}

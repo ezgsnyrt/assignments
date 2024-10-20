@@ -1,0 +1,536 @@
+* {
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    cursor: default; 
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex; 
+    justify-content: center;
+}
+
+
+.container{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    bottom: 0;
+}
+
+.navbar{
+    width: 100%;
+    background: #2AC342;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 14vh; 
+    top: 0; 
+    position:sticky; 
+    z-index:10;
+}   
+
+.logo{
+    width: 40%;
+    margin: 2%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.fa-artstation{
+    font-size: 70px;  
+    margin-right: 5%;
+}
+
+.logo a{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.navbar__link{
+    width: 40%;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+li{
+    display: inline-block;
+    margin: 3%;
+    font-size: 20px;
+}
+
+li a{
+    cursor:pointer;
+}
+
+li a:hover{
+    color: #879871;
+}
+
+nav a{
+    text-decoration: none;
+    color:black;
+}
+
+.button{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    margin: 2%;
+}
+
+.btn{
+    width: 45%;
+    padding: 5%; 
+    background-color: #34724e;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn--up{
+    background-color: #555555;
+}
+
+.btn:hover{
+    color: #C1C6BB;
+}
+
+/* Header starts here. */
+header {
+    display: inline-block;
+    height: 33vh; /* 200 px was deleted and it was revised as 33 vh. */
+    width: 100%;
+    background: url(/images/background.png) center/cover no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    background-repeat: no-repeat;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {         /* Font size was added in a way to make it similar with about us page. */
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+header h3 {        /* Font size was added in a way to make it similar with about us page. */
+    font-size: 2rem;
+    font-weight: 600;
+}
+  
+.polygon {
+    overflow: hidden;
+    position: absolute;
+    width: 25%; /*It was reduced from 40% to 25% to make it similar with about us page. */
+    left: 38%; /*It was reduced from 30% to % to make it similar with about us page. */
+    right: 0;
+    top: 10%; /*It was reduced from 15% to 10% to make it similar with about us page. */
+    z-index: -1;
+}
+
+.line {
+    justify-content: center;
+    align-self: center;
+    position: absolute;
+    top: 30%;
+    right: 25%;
+    width: 50%;
+}
+
+/* Landing page starts here. */
+.landing-page{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sub-title{
+    text-align: center;
+    animation: MoveUpDown 3s linear infinite;
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 3% 0 2% 0 ;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        top: 0;
+    }
+    50% {
+        top:10px;
+    }
+}
+
+/* Our Artists */
+.container-artist{
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+    margin-top: 8%;
+}
+
+.container-artist-box{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.container-card-box{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1%;
+
+}
+
+.container-card{
+   width: 25%;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+.card-image{
+    width: 80%;
+    border-radius: 20%;;
+}
+
+.card-image:hover{
+    animation: vibrate 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes vibrate {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(-1deg); }
+    20% { transform: rotate(1deg); }
+    30% { transform: rotate(0deg); }
+    40% { transform: rotate(1deg); }
+    50% { transform: rotate(-1deg); }
+    60% { transform: rotate(0deg); }
+    70% { transform: rotate(-1deg); }
+    80% { transform: rotate(1deg); }
+    90% { transform: rotate(0deg); }
+    100% { transform: rotate(-1deg); }
+}
+
+.card-name{
+    text-align: justify;
+    margin: 4% 0 4% 0;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.card-info{
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Our Services */
+.container-service{
+    padding-top: 2%;
+    margin-bottom: 0;
+    margin-top: 5%;
+}
+
+.grid-container{
+    background-color: #EDF9F1;
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 50%);
+    gap: 0;
+    background-color: #EDF9F1; 
+    box-sizing: border-box;
+    height: 65%;
+}
+
+.service-card-name{
+    text-align: center;
+    padding-bottom: 2%;
+    font-weight: 600;
+}
+
+.service-image{
+    width: 100%;
+    height: 100%;
+    filter:grayscale(80%)
+}
+
+.item1{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+.item2{
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+.item3{
+    grid-column: 3/5;
+    grid-row: 1/2;
+}
+
+.item4{
+    grid-column: 3/5;
+    grid-row: 2/3;
+}
+
+.item5{
+    grid-column: 5/7;
+    grid-row: 1/2;
+}
+
+.item6{
+    grid-column: 5/7;
+    grid-row: 2/3;
+}
+
+.item1, .item4, .item5{
+    padding-left: 2%;
+    line-height: 2rem;
+}
+
+.service-button{
+    font-size: 16px;  
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: #132736 4px 4px 0 0;
+    color: #132736;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    padding: 0 3%;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 10%;
+    position: relative;
+    left: 38%;
+}
+
+.service-button:hover {
+    background-color: #fbeee0;
+}
+
+.service-button:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+/* Appointment starts here */
+.container-appointment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:0;
+ }
+
+.container-appointment-title .sub-title{
+    padding-top: 0;
+    padding-bottom: 3%;
+ }
+
+.appointment-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: 2% 0 2% 0;
+}
+
+.card-appointment{
+    padding-right: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.fa-door-open, .fa-calendar-check, .fa-credit-card, .fa-check{
+    font-size: 50px;
+    color:#34724e;
+    align-self: center;
+    margin-bottom: 10%;
+}
+
+.appointment-message{
+    font-size: 16px;
+}
+
+.appointment-info{
+    font-size: 16px;
+    line-height: 2rem;
+}
+
+.appointment-button {
+    align-items: center;
+    background-color: white;
+    border: 2px solid #2E6745;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-bottom: 5%;
+}
+
+.appointment-button:after {
+    background-color: #2E6745;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+.appointment-button:hover:after {
+    transform: translate(0, 0);
+}
+
+.appointment-button:active {
+    background-color: #ffdeda;
+    outline: 0;
+}
+
+.appointment-button:hover {
+    outline: 0;
+}
+
+/* Faq starts here */
+.container-faq{
+    width: 100%;
+}
+
+.faq-bar{
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto;
+    padding: 0 2% 0 0;
+}
+
+.container-faq .sub-title{
+    padding-bottom: 1%;
+}
+
+.question {
+    position: relative;
+    background: #8FBC8F;
+    margin: 0;
+    padding: 1% 0 1% 1%;
+    display: block; 
+    width:99%;
+    cursor: pointer;
+}
+  
+.answers {
+    background: #C3CCBD;
+    padding: 0px 15px;
+    margin: 5px 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    position: relative;
+    opacity: 0;
+    -webkit-transition: .7s ease;
+    -moz-transition: .7s ease;
+    -o-transition: .7s ease;
+    transition: .7s ease;
+}
+  
+.questions:checked ~ .answers{
+    height: auto;
+    opacity: 1;
+    padding: 1%;
+}
+  
+.questions {
+    display: none;
+}
+
+ /* Footer starts here */
+footer{
+    width: 100%;
+    height: 7%; /* It was revised to reduce the height of footer part. */
+    bottom: 0;
+    left:0;
+    background: #2AC342;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a{
+    text-decoration: none;
+    color:black;
+}
+
+.footer__info-left{
+    width: 25%;
+    font-size: 20px;
+}
+
+.footer__info-right{
+    width: 12%;
+    font-size: 20px;
+    margin: 2%;
+}
+
+.footer__info-title{
+    font-weight: 700;
+}
+
+.footer__info-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 2rem; 
+}
+
+.footer__info-detail-icon{
+    cursor:pointer;
+}
+
+.footer__info-detail-icon:hover{
+    color: #C1C6BB
+}
